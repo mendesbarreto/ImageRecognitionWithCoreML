@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nEt-BG-T2X">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="j8V-xl-y6r">
+            <objects>
+                <viewController id="nEt-BG-T2X" customClass="ViewController" customModule="Promotions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides/>
+                    <view key="view" contentMode="scaleToFill" id="niF-V5-91g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hJ-cu-cb4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="3HH-C4-Ggi"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fi6-XO-v6g">
+                                <rect key="frame" x="0.0" y="395" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0h-VI-dzH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="nuw-Md-M9C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-Ra-7Db">
+                                        <rect key="frame" x="0.0" y="30" width="375" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                        <state key="normal" title="pick another image"/>
+                                        <connections>
+                                            <action selector="pickImage:" destination="nEt-BG-T2X" eventType="touchUpInside" id="8yc-QM-xCr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7hJ-cu-cb4" firstAttribute="leading" secondItem="96Y-QA-fpT" secondAttribute="leading" id="1SH-Zv-YXR"/>
+                            <constraint firstItem="7hJ-cu-cb4" firstAttribute="top" secondItem="96Y-QA-fpT" secondAttribute="top" id="6Ql-NP-GjX"/>
+                            <constraint firstItem="fi6-XO-v6g" firstAttribute="top" secondItem="7hJ-cu-cb4" secondAttribute="bottom" constant="25" id="CKE-tE-5ie"/>
+                            <constraint firstItem="fi6-XO-v6g" firstAttribute="leading" secondItem="96Y-QA-fpT" secondAttribute="leading" id="Hth-1L-qlX"/>
+                            <constraint firstItem="96Y-QA-fpT" firstAttribute="trailing" secondItem="7hJ-cu-cb4" secondAttribute="trailing" id="dGL-ds-I2C"/>
+                            <constraint firstItem="96Y-QA-fpT" firstAttribute="trailing" secondItem="fi6-XO-v6g" secondAttribute="trailing" id="no4-4a-Oke"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="96Y-QA-fpT"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="describeLabel" destination="w0h-VI-dzH" id="pxG-SI-Sxy"/>
+                        <outlet property="selectedImage" destination="7hJ-cu-cb4" id="aaJ-07-fM0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ar4-mN-tvl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="-122"/>
+        </scene>
+    </scenes>
+</document>
